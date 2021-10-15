@@ -1,0 +1,14 @@
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 50vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header {
+  background-color: rgba(23, 23, 24, 1);
+  color: #dde5ed;
+}
