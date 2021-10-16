@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <header className="header">
-        <video playsinline autoPlay muted loop>
+        <video playsInline autoPlay muted loop>
           <source src={crypto} type="video/mp4" />
         </video>
         <h1>WELCOME TO STEVE'S CHAINALYSIS ASSESSMENT</h1>

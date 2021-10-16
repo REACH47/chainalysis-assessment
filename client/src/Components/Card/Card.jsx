@@ -1,14 +1,16 @@
 import React from "react";
 import "./Card.scss";
 
-function Card() {
+function Card(props) {
   return (
     <div className="card">
       <article>
-        <h2>Card Title</h2>
-        <p>text</p>
-        <p>text</p>
-        <p>text</p>
+        <h2>
+          {props.coinName} ({props.coinSymbol})
+        </h2>
+        <p>
+          $ {props.coinPrice} per {props.coinSymbol}
+        </p>
       </article>
     </div>
   );

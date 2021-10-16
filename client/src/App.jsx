@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Components/Header/Header";
-import Compare from "./Components/Compare/Compare";
+import LunarCrush from "./Components/LunarCrush/LunarCrush";
+import Messari from "./Components/Messari/Messari";
 import Recommendation from "./Components/Recommendation/Recommendation";
 import axios from "axios";
 
 function App() {
-  const [lunar, setLunar] = useState("");
+  const [lunar, setLunar] = useState([]);
 
   useEffect(() => {
     axios
@@ -29,7 +30,7 @@ function App() {
     axios
       .get("https://data.messari.io/api/v1/assets/btc/metrics")
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
       })
       .catch((err) => {
         console.error(err);
@@ -40,7 +41,8 @@ function App() {
     <div className="App">
       <span>{lunar && !lunar}</span>
       <Header />
-      <Compare />
+      <LunarCrush lunarApi={lunar} marketName={"LunarCRUSH"} />
+      <Messari marketName={"Messari"} />
       <Recommendation />
     </div>
   );

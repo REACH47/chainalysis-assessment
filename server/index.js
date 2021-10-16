@@ -44,20 +44,20 @@ app.listen(PORT, () => console.log(`Running on https://localhost:${PORT}`));
 //   console.log(l);
 // };
 
-let lunar = "";
+// let lunar = "";
 
-axios
-  .get("https://api.lunarcrush.com/v2?data=market&key=t7583msb2asugygjl8vcto")
-  .then((res) => {
-    lunar = res;
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+// axios
+//   .get("https://api.lunarcrush.com/v2?data=market&key=t7583msb2asugygjl8vcto")
+//   .then((res) => {
+//     lunar = res;
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
 
-app.get("/", (_req, res) => {
-  res.send(JSON.stringify(lunar));
-});
+// app.get("/", (_req, res) => {
+//   res.send(JSON.stringify(lunar));
+// });
 
 const rp = require("request-promise");
 const requestOptions = {
